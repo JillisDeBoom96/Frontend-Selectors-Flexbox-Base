@@ -38,7 +38,26 @@ form{
 
 .five {
     display: flex;
-    flex-basis: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.five article {
+    box-sizing: border-box;
+    width: calc(100%/3);
+}
+
+@media screen and (max-width: 1000px) {
+
+    .five article {
+        width: 50%;
+    }
+
+    .five article:last-child {
+        width: 100%;
+    }
 }
 
 
